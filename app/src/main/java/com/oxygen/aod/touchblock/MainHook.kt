@@ -195,7 +195,8 @@ object MainHook : IXposedHookLoadPackage {
                                     } else {
                                         // Метод без аргументов или с другими типами —
                                         // просто блокируем возврат (return false)
-                                        if (param.method.returnType == Boolean::class.javaPrimitiveType) {
+                                        val method = param.method
+                                        if (method is java.lang.reflect.Method && method.returnType == Boolean::class.javaPrimitiveType) {
                                             param.result = false
                                             XposedBridge.log("$TAG: blocked $methodName (no gesture arg) in $className")
                                         }
