@@ -1,0 +1,3 @@
+-keep class com.oxygen.aod.touchblock.MainHook { *; }
+-keep class com.oxygen.aod.touchblock.hooks.** { *; }
+-keep class com.oxygen.aod.touchblock.utils.** { *; }
