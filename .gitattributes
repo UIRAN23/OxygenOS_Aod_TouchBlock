@@ -1,0 +1,2 @@
+# Ensure gradlew keeps LF line endings (it's a shell script)
+gradlew text eol=lf
